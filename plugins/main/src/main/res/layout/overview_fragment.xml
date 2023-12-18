@@ -35,7 +35,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginEnd="2dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical|center_horizontal"
                         android:paddingTop="4dp"
@@ -45,7 +45,20 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
                         app:drawableStartCompat="@drawable/ic_ribbon_profile"
-                        tools:ignore="HardcodedText" />
+                        android:ellipsize="end" />
+
+                    <ImageView
+                        android:id="@+id/exercise_mode_checkbox_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_weight="0"
+                        android:contentDescription="Enable exercise mode"
+                        app:srcCompat="@drawable/exerciseinactive"
+                        android:background="@color/ribbonDefault" />
 
                     <TextView
                         android:id="@+id/temp_target"
@@ -53,6 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_weight="1"
+                        android:layout_marginStart="2dp"
                         android:gravity="center_vertical|center_horizontal"
                         android:paddingTop="4dp"
                         android:paddingBottom="4dp"
@@ -61,7 +75,8 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
                         app:drawableStartCompat="@drawable/ic_crosstarget"
-                        tools:ignore="HardcodedText" />
+                        tools:ignore="HardcodedText"
+                        android:ellipsize="end" />
 
                 </LinearLayout>
 
