@@ -32,7 +32,8 @@ However, it is important to start with well-tested basal rate and settings for i
 ## How to build this branch in Android Studio
 1. Close any currently open projects in Android Studio
 2. Create a new project by using the "Get from VCS" button to tell it to retrieve the source from a remote version control system
-3. Use the url of this repository as a source (https://github.com/T-o-b-i-a-s/AndroidAPS.git)
+3. Use the url of this repository as a source (https://github.com/T-o-b-i-a-s/AndroidAPS.git). Do NOT append any branch name 
+   or version number or other path, just use the URL as named in this line!
 4. Now wait until Android has completed any initialization activities. As always deny any requests to upgrade Gradle.
 5. Android Studio now shows the name of the current branch in the lower right corner
   * Usually this will be `master`, which contains an out-dated version of AndroidAPS, do **not** use the `master` branch
@@ -48,7 +49,15 @@ However, it is important to start with well-tested basal rate and settings for i
    Build -> Clean to remove any remnants from previous builds and then start the APK build again.
 9. If you experience recurring problems with building the APK, as a last resort consider to 
    delete your current Android Studio completely, reinstall the most recent version and clone 
-   this repo into a new directory (different than the one you have used before). 
+   this repo into a new directory on your computer (different than the one you have used before). 
+
+## What can I do if the build does not work?
+* Follow the instructions exactly as described. Carefully re-read all previous and the failing step and try to start from scratch.
+* Make sure you used "https://github.com/T-o-b-i-a-s/AndroidAPS.git" as the URL to "Get from VCS" and none including the branch or version name
+* If you have problems understanding English and need a translation, consider using an automatic translation tool such as
+  https://www.deepl.com where you have to copy and paste the english text to get it translated or use
+  [Google Translate](https://github-com.translate.goog/T-o-b-i-a-s/AndroidAPS?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp) 
+  to automatically translate the whole page (target language is set to German in this example, but can be changed at the top).
 
 General remark:
 If you have been working with AndroidAPS 2.x before and this is the first time you build a 3.x version,
