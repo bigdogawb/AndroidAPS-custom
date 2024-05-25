@@ -109,7 +109,7 @@
     <string name="omnipod_common_pod_activation_wizard_insert_cannula_title">Insert Cannula</string>
     <string name="omnipod_common_pod_activation_wizard_insert_cannula_text">Trying to set initial basal schedule and insert the cannula.\n\nWhen the cannula has successfully been inserted, you can press <b>Next</b>.</string>
     <string name="omnipod_common_pod_activation_wizard_pod_activated_title">Pod Activated</string>
-    <string name="omnipod_common_pod_activation_wizard_pod_activated_text">The new Pod is now active.\n\nYour basal schedule has been programmed and the cannula has been inserted.\n\nPlease verify that the cannula has been inserted correctly and change your Pod if you think it has not.</string>
+    <string name="omnipod_common_pod_activation_wizard_pod_activated_text">The new Pod is now active.\n\nYour basal schedule has been programmed and the cannula has been inserted.\n\nPlease verify that the cannula has been inserted correctly and change your Pod if you think it has not.\n\n <b><font color="#FF0000">Reminder: Export Settings</font></b></string>
 
     <!-- Omnipod - Pod Deactivation Wizard -->
     <string name="omnipod_common_pod_deactivation_wizard_start_pod_deactivation_title">Deactivate Pod</string>
