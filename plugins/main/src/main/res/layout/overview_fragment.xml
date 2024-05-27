@@ -205,19 +205,6 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             app:drawableStartCompat="@drawable/ic_ribbon_profile" />
 
-        <ImageView
-            android:id="@+id/exercise_mode_checkbox_icon"
-            android:layout_width="48dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="0"
-            android:background="@color/ribbonDefault"
-            android:contentDescription="Enable exercise mode"
-            android:gravity="center_vertical|center_horizontal"
-            android:padding="2dp"
-            app:srcCompat="@drawable/exerciseinactive" />
-
         <TextView
             android:id="@+id/temp_target"
             android:layout_width="wrap_content"
