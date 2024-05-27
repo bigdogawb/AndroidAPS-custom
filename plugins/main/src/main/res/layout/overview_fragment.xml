@@ -222,5 +222,3 @@
     <include
         android:id="@+id/buttons_layout"
         layout="@layout/overview_buttons_layout" />
-
-</LinearLayout>
