@@ -56,19 +56,19 @@
         <item name="activeColor">@color/colorActive</item>
         <item name="scheduledColor">@color/colorScheduled</item>
         <!-- Carbs Button -->
-        <item name="carbsButtonColor">@color/colorCarbsButton</item>
+        <item name="carbsButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Temp Button Button -->
-        <item name="acceptTempButtonColor">@color/colorAcceptTempButton</item>
+        <item name="acceptTempButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Treatment Button -->
-        <item name="treatmentButton">@color/colorTreatmentButton</item>
+        <item name="treatmentButton">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Insulin Button -->
-        <item name="insulinButtonColor">@color/colorInsulinButton</item>
+        <item name="insulinButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Calculator Button -->
-        <item name="calculatorButtonColor">@color/colorCalculatorButton</item>
+        <item name="calculatorButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Calibration Button -->
-        <item name="calibrationButtonColor">@color/colorCalibrationButton</item>
+        <item name="calibrationButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- QuickWizard Button -->
-        <item name="quickWizardButtonColor">@color/colorQuickWizardButton</item>
+        <item name="quickWizardButtonColor">@color/aaps_theme_dark_inverseSurface</item>
         <!-- Pump -->
         <item name="pumpStatusBackground">@color/pumpStatusBackground</item>
         <!-- Objectives -->
@@ -181,22 +181,22 @@
         <!---Loop Super Bolus Icon Color-->
         <item name="loopSuperBolus">@color/carbs</item>
         <!---Action Icons Color-->
-        <item name="extBolusColor">@color/extendedBolus</item>
-        <item name="extBolusStopColor">@color/extBolusStop</item>
-        <item name="basalStartColor">@color/actionBasal</item>
-        <item name="basalCancelColor">@color/actionBasal</item>
-        <item name="basalNoTbrColor">@color/actionBasal</item>
-        <item name="basalHighColor">@color/actionBasal</item>
-        <item name="basalLowColor">@color/actionBasal</item>
-        <item name="pumpCannulaColor">@color/pumpCannula</item>
-        <item name="cgmInsertColor">@color/cgmInsert</item>
-        <item name="pumpBatteryColor">@color/pumpBattery</item>
-        <item name="noteColor">@color/note</item>
-        <item name="announcementColor">@color/announcement</item>
-        <item name="questionColor">@color/question</item>
-        <item name="pumpHistoryColor">@color/pumpHistory</item>
-        <item name="userOptionColor">@color/userOption</item>
-        <item name="sensColor">@color/sens</item>
+        <item name="extBolusColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="extBolusStopColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="basalStartColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="basalCancelColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="basalNoTbrColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="basalHighColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="basalLowColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="pumpCannulaColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="cgmInsertColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="pumpBatteryColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="noteColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="announcementColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="questionColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="pumpHistoryColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="userOptionColor">@color/aaps_theme_dark_inverseSurface</item>
+        <item name="sensColor">@color/aaps_theme_dark_inverseSurface</item>
         <!---Graph data glucose value point colors-->
         <item name="cobColor">@color/cob</item>
         <item name="uamColor">@color/uam</item>
