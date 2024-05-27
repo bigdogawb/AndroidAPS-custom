@@ -66,7 +66,7 @@
     <color name="dateTimePickerBackground">@color/buttonBackground</color>
 
     <!--    Treatment-->
-    <color name="tempbasal">#E6E0E9</color>
+    <color name="tempbasal">#C803A9F4</color>
     <color name="list_delimiter">#505050</color>
     <color name="basal">#E6E0E9</color>
 
