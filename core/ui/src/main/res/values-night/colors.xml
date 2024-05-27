@@ -68,7 +68,7 @@
     <!--    Treatment-->
     <color name="tempbasal">#C803A9F4</color>
     <color name="list_delimiter">#505050</color>
-    <color name="basal">#E6E0E9</color>
+    <color name="basal">#00FFFF</color>
 
     <!--    Loop     -->
     <color name="loopDisconnected">#939393</color>
