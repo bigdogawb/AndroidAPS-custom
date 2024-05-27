@@ -73,6 +73,7 @@
         android:maxHeight="5dp"
         android:minHeight="3dp"
         android:scaleY="5"
+        android:progressTint="@color/colorAccent"
         tools:progress="50" />
 
     <com.google.android.material.button.MaterialButton
