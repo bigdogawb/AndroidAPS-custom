@@ -341,16 +341,6 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         handler.post { refreshAll() }
         updatePumpStatus()
         updateCalcProgress()
-
-        // Mod check color of exercise mode toggle icon
-        if ( sp.getBoolean(app.aaps.core.utils.R.string.key_high_temptarget_raises_sensitivity, false)) {
-            binding.exerciseModeCheckboxIcon.setImageResource(R.drawable.exercise)
-            binding.exerciseModeCheckboxIcon.setBackgroundResource(app.aaps.core.ui.R.color.ribbonWarning)
-        } else {
-            binding.exerciseModeCheckboxIcon.setImageResource(R.drawable.exerciseinactive)
-            binding.exerciseModeCheckboxIcon.setBackgroundResource(app.aaps.core.ui.R.color.ribbonDefault)
-        }
-        // End mod
         
     }
 
