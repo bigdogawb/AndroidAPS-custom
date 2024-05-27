@@ -44,8 +44,6 @@
             android:drawableTop="@drawable/icon_insulin_carbs"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/overview_treatment_label"
-            android:textColor="?attr/icTreatmentColor"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -59,8 +57,6 @@
             android:drawableTop="@drawable/ic_bolus"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/overview_insulin_label"
-            android:textColor="?attr/icBolusColor"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -73,8 +69,6 @@
             android:drawableTop="@drawable/ic_cp_bolus_carbs"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/carbs"
-            android:textColor="?attr/icBolusCarbsColor"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -87,8 +81,6 @@
             android:drawableTop="@drawable/ic_calculator"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/calculator_label"
-            android:textColor="?attr/icCalculatorColor"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -101,8 +93,6 @@
             android:drawableTop="@drawable/ic_calibration"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="@string/calibration"
-            android:textColor="?attr/icCalibrationColor"
             android:visibility="gone"
             app:iconPadding="-4dp" />
 
@@ -117,8 +107,6 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/overview_cgm"
-            android:textColor="?attr/icCalibrationColor"
-            android:visibility="gone"
             app:iconPadding="-4dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -130,8 +118,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_quick_wizard"
             android:hint="@string/quickwizard"
-            android:text="@string/quickwizard"
-            android:textColor="?attr/icQuickWizardColor"
             app:iconPadding="-4dp" />
 
     </LinearLayout>
