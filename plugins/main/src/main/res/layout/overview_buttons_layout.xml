@@ -46,7 +46,6 @@
             android:singleLine="true"
             android:textColor="?attr/icTreatmentColor"
             android:visibility="gone"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -60,7 +59,6 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="?attr/icBolusColor"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -74,7 +72,6 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="?attr/icBolusCarbsColor"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -88,7 +85,6 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="?attr/icCalculatorColor"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -103,7 +99,6 @@
             android:singleLine="true"
             android:textColor="?attr/icCalibrationColor"
             android:visibility="gone"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -118,7 +113,6 @@
             android:singleLine="true"
             android:textColor="?attr/icCalibrationColor"
             android:visibility="gone"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -130,7 +124,6 @@
             android:layout_weight="0.5"
             android:drawableTop="@drawable/ic_quick_wizard"
             android:textColor="?attr/icQuickWizardColor"
-            app:iconGravity="textTop"
             app:iconPadding="0dp" />
 
     </LinearLayout>
