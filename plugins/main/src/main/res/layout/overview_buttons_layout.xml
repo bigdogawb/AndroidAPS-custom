@@ -37,15 +37,15 @@
         <app.aaps.core.ui.elements.SingleClickButton
             android:id="@+id/treatment_button"
             style="@style/ButtonSmallFontStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
             android:layout_marginEnd="-2dp"
             android:layout_weight="0.5"
-            android:drawableTop="@drawable/ic_bolus"
-            android:gravity="center"
+            android:drawableTop="@drawable/icon_insulin_carbs"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textColor="?attr/icBolusColor"
+            android:textColor="?attr/icTreatmentColor"
+            android:visibility="gone"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -101,6 +101,7 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="?attr/icBolusColor"
+            android:visibility="gone"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
@@ -115,20 +116,19 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textColor="?attr/icBolusColor"
+            android:visibility="gone"
             app:iconPadding="0dp" />
 
         <app.aaps.core.ui.elements.SingleClickButton
             android:id="@+id/quick_wizard_button"
             style="@style/ButtonSmallFontStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
             android:layout_marginEnd="-2dp"
             android:layout_weight="0.5"
-            android:drawableTop="@drawable/ic_bolus"
-            android:gravity="center"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="?attr/icBolusColor"
+            android:drawableTop="@drawable/ic_quick_wizard"
+            android:textColor="?attr/icQuickWizardColor"
+            android:visibility="gone"
             app:iconPadding="0dp" />
 
     </LinearLayout>
