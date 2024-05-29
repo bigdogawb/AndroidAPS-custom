@@ -36,7 +36,10 @@
                 app:contentPadding="2dp"
                 app:cardElevation="2dp"
                 app:cardUseCompatPadding="false"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
+                android:backgroundTint="@color/background_dark"
+                android:background="@color/background_dark">>
 
                 <include
                     android:id="@+id/info_layout"
