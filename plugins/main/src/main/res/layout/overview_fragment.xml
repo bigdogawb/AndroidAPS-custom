@@ -147,6 +147,9 @@
                 app:contentPadding="2dp"
                 app:cardElevation="2dp"
                 app:cardUseCompatPadding="false"
+                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
+                android:backgroundTint="@color/background_dark"
+                android:background="@color/background_dark">
                 android:layout_gravity="center">
 
                 <include
@@ -214,9 +217,6 @@
             android:paddingBottom="8dp"
             android:text="Profile"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            app:drawableStartCompat="@drawable/ic_ribbon_profile"
-            android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-            android:backgroundTint="@color/background_dark"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -235,8 +235,6 @@
             android:text="@string/value_unavailable_short"
             android:textAppearance="?android:attr/textAppearanceSmall"
             app:drawableStartCompat="@drawable/ic_crosstarget"
-            android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-            android:backgroundTint="@color/background_dark"
             tools:ignore="HardcodedText" />
 
 
