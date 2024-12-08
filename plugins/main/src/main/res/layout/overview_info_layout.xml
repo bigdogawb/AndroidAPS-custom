@@ -11,14 +11,15 @@
         android:id="@+id/bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:scaleX="0.75"
         android:scaleY="0.75"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteY="16dp"
         tools:text="00.0" />
 
     <ImageView
@@ -73,9 +74,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
         app:layout_constraintTop_toBottomOf="@+id/bg"
         tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteX="195dp"
         tools:text="n/a" />
 
     <TableLayout
