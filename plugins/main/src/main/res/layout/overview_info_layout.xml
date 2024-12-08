@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:textSize="60sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="16dp"
         tools:text="00.0" />
 
@@ -45,31 +46,33 @@
         android:id="@+id/arrows_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:focusable="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toStartOf="@+id/deltas_layout"
         app:layout_constraintStart_toEndOf="@+id/delta_large"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UseCompoundDrawables"
-        android:focusable="true">
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/arrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:contentDescription="@string/trend_arrow" />
+            android:contentDescription="@string/trend_arrow"
+            app:layout_constraintHorizontal_bias="0.0" />
 
         <TextView
             android:id="@+id/time_ago"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:layout_constraintTop_toTopOf="@+id/long_avg_delta"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintTop_toTopOf="@+id/long_avg_delta"
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
 
     </LinearLayout>
 
@@ -77,13 +80,13 @@
         android:id="@+id/deltas_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
         android:scaleX="0.5"
         android:scaleY="0.5"
-        app:layout_constraintBottom_toBottomOf="@+id/arrows_layout"
         app:layout_constraintEnd_toStartOf="@+id/aps_mode_layout"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toEndOf="@+id/bg"
+        app:layout_constraintTop_toBottomOf="@+id/arrows_layout">
 
         <TableRow
             android:layout_width="wrap_content"
