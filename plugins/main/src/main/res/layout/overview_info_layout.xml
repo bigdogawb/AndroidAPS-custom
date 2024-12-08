@@ -46,12 +46,12 @@
         android:id="@+id/arrows_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:focusable="true"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/bg"
-        app:layout_constraintStart_toEndOf="@+id/bg"
-        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toBottomOf="@+id/bg"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -205,12 +205,13 @@
         android:id="@+id/aps_mode_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="32dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toStartOf="@id/time_layout"
-        app:layout_constraintStart_toEndOf="@id/deltas_layout"
+        app:layout_constraintStart_toStartOf="@+id/delta_large"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseCompoundDrawables">
 
@@ -220,9 +221,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="-4dp"
+            android:contentDescription="@string/aps_mode_title"
             android:visibility="gone"
-            app:srcCompat="@drawable/ic_loop_closed"
-            android:contentDescription="@string/aps_mode_title" />
+            app:srcCompat="@drawable/ic_loop_closed" />
 
         <TextView
             android:id="@+id/aps_mode_text"
