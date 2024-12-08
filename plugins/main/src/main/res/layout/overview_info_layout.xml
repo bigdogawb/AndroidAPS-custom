@@ -52,9 +52,9 @@
         android:orientation="vertical"
         android:scaleX="0.75"
         android:scaleY="0.75"
+        app:layout_constraintBottom_toBottomOf="@+id/aps_mode_layout"
         app:layout_constraintEnd_toEndOf="@+id/bg"
         app:layout_constraintStart_toStartOf="@+id/bg"
-        app:layout_constraintTop_toBottomOf="@+id/aps_mode_layout"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -84,8 +84,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
         app:layout_constraintEnd_toStartOf="@+id/basal_layout"
         app:layout_constraintStart_toEndOf="@+id/cob_layout"
         app:layout_constraintTop_toTopOf="@+id/iob_layout">
