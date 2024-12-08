@@ -47,13 +47,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
         android:focusable="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
-        app:layout_constraintEnd_toStartOf="@+id/deltas_layout"
-        app:layout_constraintStart_toEndOf="@+id/delta_large"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -80,13 +78,14 @@
         android:id="@+id/deltas_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="64dp"
         android:orientation="vertical"
         android:scaleX="0.5"
         android:scaleY="0.5"
-        app:layout_constraintEnd_toStartOf="@+id/aps_mode_layout"
-        app:layout_constraintStart_toEndOf="@+id/bg"
-        app:layout_constraintTop_toBottomOf="@+id/arrows_layout">
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toStartOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -282,7 +281,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="33dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
