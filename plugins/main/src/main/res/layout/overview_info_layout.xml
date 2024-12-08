@@ -46,12 +46,11 @@
         android:id="@+id/arrows_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:focusable="true"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/bg"
         app:layout_constraintStart_toStartOf="@+id/bg"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aps_mode_layout"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -205,8 +204,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:scaleX="2"
-        android:scaleY="2"
+        android:scaleX="2.25"
+        android:scaleY="2.25"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="@+id/bg"
         app:layout_constraintStart_toStartOf="@+id/bg"
