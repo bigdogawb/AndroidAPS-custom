@@ -29,18 +29,18 @@
                 android:id="@+id/infoCard"
                 style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="233dp"
+                android:layout_gravity="center"
                 android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/background_dark"
+                android:backgroundTint="@color/background_dark"
+                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
                 app:cardCornerRadius="4dp"
-                app:contentPadding="2dp"
                 app:cardElevation="2dp"
                 app:cardUseCompatPadding="false"
-                android:layout_gravity="center"
-                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-                android:backgroundTint="@color/background_dark"
-                android:background="@color/background_dark">>
+                app:contentPadding="2dp">>
 
                 <include
                     android:id="@+id/info_layout"

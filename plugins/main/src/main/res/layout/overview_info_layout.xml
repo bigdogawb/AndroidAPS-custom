@@ -11,13 +11,12 @@
         android:id="@+id/bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="00.0"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/delta_large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:text="00.0" />
 
     <ImageView
         android:id="@+id/bg_quality"
@@ -78,11 +77,12 @@
         android:id="@+id/deltas_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="192dp"
         android:orientation="vertical"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
         app:layout_constraintBottom_toBottomOf="@+id/arrows_layout"
         app:layout_constraintEnd_toStartOf="@+id/aps_mode_layout"
-        app:layout_constraintStart_toEndOf="@+id/arrows_layout"
         app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
@@ -279,19 +279,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="33dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/cob_layout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_bolus"
-            android:contentDescription="@string/iob" />
+            android:contentDescription="@string/iob"
+            app:srcCompat="@drawable/ic_bolus" />
 
         <TextView
             android:id="@+id/iob"
@@ -300,23 +302,23 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/cob_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusable="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/basal_layout"
         app:layout_constraintStart_toEndOf="@+id/iob_layout"
         app:layout_constraintTop_toTopOf="@+id/iob_layout"
-        tools:ignore="UseCompoundDrawables"
-        android:focusable="true">
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/carbs_icon"
@@ -333,10 +335,10 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
     <LinearLayout
@@ -347,7 +349,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/extended_layout"
         app:layout_constraintStart_toEndOf="@+id/cob_layout"
-        app:layout_constraintTop_toTopOf="@+id/iob_layout"
+        app:layout_constraintTop_toTopOf="@+id/cob_layout"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -355,8 +357,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_cp_basal_no_tbr"
-            android:contentDescription="@string/basal" />
+            android:contentDescription="@string/basal"
+            app:srcCompat="@drawable/ic_cp_basal_no_tbr" />
 
         <TextView
             android:id="@+id/base_basal"
@@ -365,10 +367,10 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
     <LinearLayout
@@ -379,15 +381,15 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/as_layout"
         app:layout_constraintStart_toEndOf="@+id/basal_layout"
-        app:layout_constraintTop_toTopOf="@+id/iob_layout"
+        app:layout_constraintTop_toTopOf="@+id/basal_layout"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_actions_start_extended_bolus"
-            android:contentDescription="@string/extended_bolus" />
+            android:contentDescription="@string/extended_bolus"
+            app:srcCompat="@drawable/ic_actions_start_extended_bolus" />
 
         <TextView
             android:id="@+id/extended_bolus"
@@ -396,31 +398,31 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/as_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusable="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/extended_layout"
-        app:layout_constraintTop_toTopOf="@+id/iob_layout"
-        tools:ignore="UseCompoundDrawables"
-        android:focusable="true">
+        app:layout_constraintTop_toTopOf="@+id/extended_layout"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/sensitivity_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_swap_vert_black_48dp_green"
-            android:contentDescription="@string/a11y_autosens_label" />
+            android:contentDescription="@string/a11y_autosens_label"
+            app:srcCompat="@drawable/ic_swap_vert_black_48dp_green" />
 
         <TextView
             android:id="@+id/sensitivity"
@@ -429,10 +431,10 @@
             android:gravity="center_horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
 
         <TextView
             android:id="@+id/variable_sensitivity"
@@ -441,11 +443,11 @@
             android:layout_marginTop="-9dp"
             android:gravity="center_horizontal"
             android:paddingBottom="3dp"
-            tools:text="n/a"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
             android:visibility="visible"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:text="n/a" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
