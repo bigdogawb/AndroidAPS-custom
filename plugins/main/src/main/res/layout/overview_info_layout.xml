@@ -203,14 +203,12 @@
         android:id="@+id/aps_mode_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="32dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
-        app:layout_constraintEnd_toStartOf="@id/time_layout"
-        app:layout_constraintStart_toStartOf="@+id/delta_large"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
