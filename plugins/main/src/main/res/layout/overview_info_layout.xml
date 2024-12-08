@@ -80,9 +80,9 @@
         android:orientation="vertical"
         android:scaleX="0.5"
         android:scaleY="0.5"
-        app:layout_constraintBottom_toBottomOf="@+id/bg"
-        app:layout_constraintEnd_toStartOf="@+id/bg"
-        app:layout_constraintTop_toTopOf="@+id/bg">
+        app:layout_constraintEnd_toStartOf="@+id/basal_layout"
+        app:layout_constraintStart_toEndOf="@+id/cob_layout"
+        app:layout_constraintTop_toTopOf="@+id/iob_layout">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -279,9 +279,7 @@
         android:id="@+id/iob_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:layout_marginTop="128dp"
-        android:layout_marginEnd="33dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/cob_layout"
