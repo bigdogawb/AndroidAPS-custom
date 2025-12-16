@@ -57,7 +57,7 @@ class DetermineBasalAdapterSMBJS internal constructor(private val scriptReader: 
     private var currentTemp = JSONObject()
     private var autosensData = JSONObject()
     private var microBolusAllowed = false
-    private var smbAlwaysAllowed = false
+    private var smbAlwaysAllowed = true
     private var currentTime: Long = 0
     private var flatBGsDetected = false
 

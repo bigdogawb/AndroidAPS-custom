@@ -58,7 +58,7 @@ class DetermineBasalAdapterSMBDynamicISFJS internal constructor(private val scri
     private var currentTemp = JSONObject()
     private var autosensData = JSONObject()
     private var microBolusAllowed = false
-    private var smbAlwaysAllowed = false
+    private var smbAlwaysAllowed = true
     private var currentTime: Long = 0
     private var flatBGsDetected = false
 
