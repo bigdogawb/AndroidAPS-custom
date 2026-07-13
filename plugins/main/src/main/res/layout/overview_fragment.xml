@@ -5,42 +5,43 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#000000"
     tools:context=".general.overview.OverviewFragment">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/top_part_scrollbar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        >
+        android:background="#000000">
 
         <LinearLayout
             android:id="@+id/inner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/notifications"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp" />
 
+            <!-- Main Info Card (Consolidated) -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/infoCard"
-                style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginTop="4dp"
-                app:cardCornerRadius="4dp"
-                app:contentPadding="2dp"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="false"
-                android:layout_gravity="center"
-                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-                android:backgroundTint="@color/background_dark"
-                android:background="@color/background_dark">>
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#10121a"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#1a1d28"
+                app:strokeWidth="1dp"
+                app:cardUseCompatPadding="false">
 
                 <include
                     android:id="@+id/info_layout"
@@ -48,22 +49,20 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Status Lights Card (Hidden if consolidated, but kept for functionality) -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/statusCard"
-                style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginTop="4dp"
-                app:cardCornerRadius="4dp"
-                app:contentPadding="2dp"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="false"
-                android:layout_gravity="center"
-                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-                android:backgroundTint="@color/background_dark"
-                android:background="@color/background_dark">>
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#10121a"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#1a1d28"
+                app:strokeWidth="1dp">
 
                 <include
                     android:id="@+id/status_lights_layout"
@@ -71,19 +70,20 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- NSClient Card (Hidden if consolidated) -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/nsclientCard"
-                style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginTop="4dp"
-                app:cardCornerRadius="4dp"
-                app:contentPadding="2dp"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="false"
-                android:layout_gravity="center">
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#10121a"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#1a1d28"
+                app:strokeWidth="1dp">
 
                 <com.google.android.flexbox.FlexboxLayout
                     android:id="@+id/nsclient"
@@ -94,63 +94,29 @@
                     app:flexDirection="row"
                     app:flexWrap="wrap"
                     app:justifyContent="space_around"
-                    android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-                    android:backgroundTint="@color/background_dark"
-                    android:background="@color/background_dark">>
+                    android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/pump"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="4sp"
-                        android:paddingEnd="4sp"
-                        tools:text="Pump: running"
-                        android:textSize="16sp"
-                        tools:ignore="HardcodedText" />
-
-                    <TextView
-                        android:id="@+id/openaps"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingStart="4sp"
-                        android:paddingEnd="4sp"
-                        tools:text="OpenAPS: 3 min ago"
-                        android:textSize="16sp"
-                        tools:ignore="HardcodedText" />
-
-                    <TextView
-                        android:id="@+id/uploader"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingStart="4sp"
-                        android:paddingEnd="4sp"
-                        tools:text="Uploader: 84%"
-                        android:textSize="16sp"
-                        tools:ignore="HardcodedText" />
+                    <TextView android:id="@+id/pump" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/openaps" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/uploader" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
                 </com.google.android.flexbox.FlexboxLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Graph Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/graphCard"
-                style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                app:cardCornerRadius="4dp"
-                app:contentPadding="2dp"
-                app:cardElevation="2dp"
-                app:cardUseCompatPadding="false"
-                android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-                android:backgroundTint="@color/background_dark"
-                android:background="@color/background_dark">
-                android:layout_gravity="center">
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="#10121a"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#1a1d28"
+                app:strokeWidth="1dp">
 
                 <include
                     android:id="@+id/graphs_layout"
@@ -162,6 +128,7 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <!-- Pump Status bar -->
     <LinearLayout
         android:id="@+id/pump_status_layout"
         android:layout_width="match_parent"
@@ -173,14 +140,15 @@
             android:id="@+id/pump_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="?attr/pumpStatusBackground"
-            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#1a1d28"
+            android:gravity="center"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
-            android:text="@string/initializing"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:text="@string/initializing" />
 
     </LinearLayout>
 
@@ -188,72 +156,40 @@
         android:id="@+id/progress_bar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:indeterminate="false"
         android:max="100"
         android:progress="100" />
 
+    <!-- Loop Info (Hidden if consolidated) -->
     <LinearLayout
         android:id="@+id/loop_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
-        <TextView
-            android:id="@+id/active_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:gravity="center_vertical|center_horizontal"
-            android:hint="active profile"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:text="Profile"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/temp_target"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:gravity="center_vertical|center_horizontal"
-            android:hint="temp target"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="8dp"
-            android:text="@string/value_unavailable_short"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            app:drawableStartCompat="@drawable/ic_crosstarget"
-            tools:ignore="HardcodedText" />
-
+        <TextView android:id="@+id/active_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/temp_target" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!-- Bottom Navigation Buttons -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:foregroundTint="@color/mtrl_btn_bg_color_selector_grey"
-        android:backgroundTint="@color/background_dark"
-        android:background="@color/background_dark">
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <include
             android:id="@+id/buttons_layout"
             layout="@layout/overview_buttons_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_height="wrap_content" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </FrameLayout>
 
 </LinearLayout>

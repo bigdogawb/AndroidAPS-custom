@@ -863,7 +863,10 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     else app.aaps.core.ui.R.attr.ribbonTextDefaultColor
                 } else app.aaps.core.ui.R.attr.ribbonTextDefaultColor
             } ?: app.aaps.core.ui.R.attr.ribbonTextDefaultColor
-            setRibbon(binding.activeProfile, profileTextColor, profileBackgroundColor, profileFunction.getProfileNameWithRemainingTime())
+            setRibbon(binding.infoLayout.activeProfile, profileTextColor, profileBackgroundColor, profileFunction.getProfileNameWithRemainingTime())
+            
+            val pct = if (profile is ProfileSealed.EPS) profile.value.originalPercentage else 100
+            binding.infoLayout.activeProfilePct.text = "$pct%"
         }
     }
 
@@ -900,7 +903,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         // Status lights
         val pump = activePlugin.activePump
         val isPatchPump = pump.pumpDescription.isPatchPump
-        binding.statusLightsLayout.apply {
+        binding.infoLayout.apply {
             cannulaOrPatch.setImageResource(if (isPatchPump) app.aaps.core.main.R.drawable.ic_patch_pump_outline else R.drawable.ic_cp_age_cannula)
             cannulaOrPatch.contentDescription = rh.gs(if (isPatchPump) R.string.statuslights_patch_pump_age else R.string.statuslights_cannula_age)
             insulinAge.visibility = isPatchPump.not().toVisibility()
@@ -909,17 +912,17 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             val useBatteryLevel = (pump.model() == PumpType.OMNIPOD_EROS)
                 || (pump.model() != PumpType.ACCU_CHEK_COMBO && pump.model() != PumpType.OMNIPOD_DASH)
             pbLevel.visibility = useBatteryLevel.toVisibility()
-            statusLightsLayout.visibility = (sp.getBoolean(R.string.key_show_statuslights, true) || config.NSCLIENT).toVisibility()
+            // statusLightsLayout.visibility = (sp.getBoolean(R.string.key_show_statuslights, true) || config.NSCLIENT).toVisibility()
         }
         statusLightHandler.updateStatusLights(
-            binding.statusLightsLayout.cannulaAge,
+            binding.infoLayout.cannulaAge,
             null,
-            binding.statusLightsLayout.insulinAge,
-            binding.statusLightsLayout.reservoirLevel,
-            binding.statusLightsLayout.sensorAge,
+            binding.infoLayout.insulinAge,
+            binding.infoLayout.reservoirLevel,
+            binding.infoLayout.sensorAge,
             null,
-            binding.statusLightsLayout.pbAge,
-            binding.statusLightsLayout.pbLevel
+            binding.infoLayout.pbAge,
+            binding.infoLayout.pbLevel
         )
     }
 
@@ -962,7 +965,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             _binding ?: return@runOnUiThread
             if (tempTarget != null) {
                 setRibbon(
-                    binding.tempTarget,
+                    binding.infoLayout.tempTarget,
                     app.aaps.core.ui.R.attr.ribbonTextWarningColor,
                     app.aaps.core.ui.R.attr.ribbonWarningColor,
                     profileUtil.toTargetRangeString(tempTarget.lowTarget, tempTarget.highTarget, GlucoseUnit.MGDL, units) + " " + dateUtil.untilString(tempTarget.end, rh)
@@ -978,14 +981,14 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
                     if (targetUsed != 0.0 && abs(profile.getTargetMgdl() - targetUsed) > 0.01) {
                         aapsLogger.debug("Adjusted target. Profile: ${profile.getTargetMgdl()} APS: $targetUsed")
                         setRibbon(
-                            binding.tempTarget,
+                            binding.infoLayout.tempTarget,
                             app.aaps.core.ui.R.attr.ribbonTextWarningColor,
                             app.aaps.core.ui.R.attr.tempTargetBackgroundColor,
                             profileUtil.toTargetRangeString(targetUsed, targetUsed, GlucoseUnit.MGDL, units)
                         )
                     } else {
                         setRibbon(
-                            binding.tempTarget,
+                            binding.infoLayout.tempTarget,
                             app.aaps.core.ui.R.attr.ribbonTextDefaultColor,
                             app.aaps.core.ui.R.attr.ribbonDefaultColor,
                             profileUtil.toTargetRangeString(profile.getTargetLowMgdl(), profile.getTargetHighMgdl(), GlucoseUnit.MGDL, units)

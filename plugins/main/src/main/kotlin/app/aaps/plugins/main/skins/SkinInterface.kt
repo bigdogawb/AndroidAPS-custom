@@ -52,7 +52,7 @@ interface SkinInterface {
                     val texts = listOf(pump, openaps, uploader)
                     for (v in texts) v.setTextSize(COMPLEX_UNIT_PX, v.textSize * 1.3f)
                 }
-                binding.statusLightsLayout.apply {
+                binding.infoLayout.apply {
                     val texts = listOf(cannulaAge, insulinAge, reservoirLevel, sensorAge, pbAge, pbLevel)
                     for (v in texts) v.setTextSize(COMPLEX_UNIT_PX, v.textSize * 1.3f)
                 }
