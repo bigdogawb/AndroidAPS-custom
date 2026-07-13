@@ -232,9 +232,8 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
         binding.buttonsLayout.quickWizardButton.setOnLongClickListener(this)
         binding.infoLayout.apsMode.setOnClickListener(this)
         binding.infoLayout.apsMode.setOnLongClickListener(this)
-
-
-        
+        binding.infoLayout.profilePillCard.setOnLongClickListener(this)
+        binding.infoLayout.profilePillLayout.setOnLongClickListener(this)
     }
 
     @Synchronized
@@ -501,7 +500,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             }
 
             R.id.temp_target         -> v.performClick()
-            R.id.active_profile      -> activity?.let { activity ->
+            R.id.active_profile, R.id.profile_pill_card      -> activity?.let { activity ->
                 if (loop.isDisconnected) OKDialog.show(activity, rh.gs(R.string.not_available_full), rh.gs(R.string.smscommunicator_pump_disconnected))
                 else
                     protectionCheck.queryProtection(
@@ -651,7 +650,7 @@ class OverviewFragment : DaggerFragment(), View.OnClickListener, OnLongClickList
             _binding ?: return@runOnUiThread
             if (config.APS && pump.pumpDescription.isTempBasalCapable) {
                 binding.infoLayout.apsMode.visibility = View.VISIBLE
-                binding.infoLayout.timeLayout.visibility = View.GONE
+                // binding.infoLayout.timeLayout.visibility = View.GONE
                 when {
                     (loop as PluginBase).isEnabled() && loop.isSuperBolus                       -> {
                         binding.infoLayout.apsMode.setImageResource(R.drawable.ic_loop_superbolus)

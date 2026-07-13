@@ -10,14 +10,16 @@
     <!-- ═══ Hero Section (three columns) ═══ -->
     <LinearLayout
         android:id="@+id/hero_section"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:baselineAligned="false"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <!-- Left column: Pump info -->
         <LinearLayout
@@ -133,7 +135,7 @@
             android:id="@+id/center_column"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"
+            android:layout_weight="1.4"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
@@ -144,11 +146,12 @@
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:id="@+id/bg_quality"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/a11y_bg_quality"
-                    android:visibility="gone" />
+                    android:id="@+id/aps_mode"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/ic_loop_closed"
+                    android:contentDescription="@string/aps_mode_title" />
 
                 <TextView
                     android:id="@+id/bg"
@@ -187,6 +190,15 @@
                     tools:text="-0.8 Falling"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/aps_mode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#aaaaaa"
+                tools:text="Closed Loop"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/delta_large"
@@ -387,6 +399,7 @@
 
         <!-- PROFILE pill -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profile_pill_card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -398,6 +411,7 @@
             app:strokeWidth="1dp">
 
             <LinearLayout
+                android:id="@+id/profile_pill_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -443,8 +457,7 @@
         <TextView android:id="@+id/variable_sensitivity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <ImageView android:id="@+id/sensitivity_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <ImageView android:id="@+id/base_basal_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
-        <ImageView android:id="@+id/aps_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
-        <TextView android:id="@+id/aps_mode_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@+id/bg_quality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <ImageView android:id="@+id/carbs_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <TextView android:id="@+id/pb_age" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:id="@+id/insulin_age" android:layout_width="wrap_content" android:layout_height="wrap_content" />
