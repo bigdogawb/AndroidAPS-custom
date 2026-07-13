@@ -309,11 +309,16 @@
 
                 <TextView
                     android:id="@+id/iob"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#60a5fa"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="18sp"
                     tools:text="3.21u" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -350,11 +355,16 @@
 
                 <TextView
                     android:id="@+id/sensitivity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#c084fc"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="18sp"
                     tools:text="100%" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -390,11 +400,16 @@
 
                 <TextView
                     android:id="@+id/base_basal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#fb923c"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="18sp"
                     tools:text="0.50u" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
