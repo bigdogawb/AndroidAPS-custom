@@ -268,7 +268,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ═══ Stat Pills Row (4 columns) ═══ -->
+    <!-- ═══ Stat Pills Row (3 columns) ═══ -->
     <LinearLayout
         android:id="@+id/pills_row"
         android:layout_width="match_parent"
@@ -364,8 +364,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="4dp"
             app:cardBackgroundColor="#10121a"
             app:cardCornerRadius="14dp"
             app:cardElevation="0dp"
@@ -399,47 +398,6 @@
                     tools:text="0.50u" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- PROFILE pill -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/profile_pill_card"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            app:cardBackgroundColor="#10121a"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="0dp"
-            app:strokeColor="#1a1d28"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:id="@+id/profile_pill_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:padding="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PROFILE"
-                    android:textSize="11sp"
-                    android:textColor="#9aa0ad"
-                    android:letterSpacing="0.1"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/active_profile_pct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#00d4ff"
-                    tools:text="140%" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
     <!-- Hidden elements for compatibility -->
@@ -458,12 +416,15 @@
         <TextView android:id="@+id/cob" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:id="@+id/extended_bolus" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:id="@+id/variable_sensitivity" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:id="@+id/active_profile_pct" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <ImageView android:id="@+id/sensitivity_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <ImageView android:id="@+id/base_basal_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <ImageView android:id="@+id/bg_quality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <ImageView android:id="@+id/carbs_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
         <TextView android:id="@+id/pb_age" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:id="@+id/insulin_age" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:id="@+id/profile_pill_card" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:id="@+id/profile_pill_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <LinearLayout android:id="@+id/extended_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" />
         <TableLayout android:id="@+id/deltas_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <LinearLayout android:id="@+id/cob_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" />
