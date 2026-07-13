@@ -100,7 +100,7 @@
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
-            <!-- Arrows and time ago -->
+            <!-- Arrows -->
             <LinearLayout
                 android:id="@+id/arrows_layout"
                 android:layout_width="wrap_content"
@@ -115,16 +115,6 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/trend_arrow" />
-
-                <TextView
-                    android:id="@+id/time_ago"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textColor="#aaaaaa"
-                    android:textSize="14sp"
-                    tools:text="3m ago"
-                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <!-- Deltas (mini table) -->
@@ -176,7 +166,7 @@
 
         </LinearLayout>
 
-        <!-- Right column: Reading Time -->
+        <!-- Right column: Reading Age -->
         <LinearLayout
             android:id="@+id/time_layout"
             android:layout_width="0dp"
@@ -188,34 +178,37 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TIME"
+                android:text="READING"
                 android:textSize="10sp"
                 android:textColor="#9aa0ad"
                 android:letterSpacing="0.1"
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/time_ago"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#e8eaf0"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                tools:text="8:00 PM"
+                tools:text="3m ago"
                 tools:ignore="HardcodedText" />
 
+            <!-- Hidden elements to keep code functional -->
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
             <TextView
                 android:id="@+id/time_ago_short"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#aaaaaa"
-                android:textSize="14sp"
-                tools:text="(-5)"
-                tools:ignore="HardcodedText" />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ═══ Stat Pills Row (4 columns) ═══ -->
+    <!-- ═══ Stat Pills Row (3 columns) ═══ -->
     <LinearLayout
         android:id="@+id/pills_row"
         android:layout_width="match_parent"
@@ -338,7 +331,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
             app:cardBackgroundColor="#10121a"
             app:cardCornerRadius="10dp"
             app:cardElevation="0dp"
@@ -380,50 +372,9 @@
                     android:contentDescription="@string/basal" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- Extended pill -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="2dp"
-            app:cardBackgroundColor="#10121a"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:strokeColor="#1a1d28"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:id="@+id/extended_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="EXT"
-                    android:textSize="10sp"
-                    android:textColor="#9aa0ad"
-                    android:letterSpacing="0.1"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/extended_bolus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#00d4ff"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    tools:text="0.00u"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
-    <!-- Hidden / Removed Carbs Layout to keep it functional -->
+    <!-- Hidden Layout to keep it functional -->
     <LinearLayout
         android:id="@+id/cob_layout"
         android:layout_width="0dp"
@@ -433,6 +384,14 @@
         app:layout_constraintTop_toTopOf="parent">
         <ImageView android:id="@+id/carbs_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/cob" />
         <TextView android:id="@+id/cob" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:ignore="HardcodedText" />
+
+        <!-- Moved EXT content here -->
+        <LinearLayout
+            android:id="@+id/extended_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/extended_bolus" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:ignore="HardcodedText" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
